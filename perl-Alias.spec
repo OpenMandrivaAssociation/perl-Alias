@@ -1,15 +1,18 @@
-%define real_name Alias
+%define upstream_name    Alias
+%define upstream_version 2.32
 
-Summary:	CPAN %{real_name} module for aliasing services
-Name:		perl-%{real_name}
-Version:	2.32
-Release:        %mkrel 6
-License:	GPL or Artistic
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	CPAN %{upstream_name} module for aliasing services
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Alias/%{real_name}-%{version}.tar.bz2
+URL:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Alias/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This Perl module performs aliasing services. You may find this
@@ -23,7 +26,7 @@ module useful if you:
      trust yourself from changing $PI
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,4 +46,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/*/Alias.pm
 %{perl_vendorlib}/*/auto/Alias/*
 %{_mandir}/*/*
-
