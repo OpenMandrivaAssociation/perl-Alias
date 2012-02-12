@@ -1,5 +1,5 @@
-%define upstream_name    Alias
-%define upstream_version 2.32
+%define	upstream_name Alias
+%define	upstream_version 2.32
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
@@ -13,7 +13,6 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Alias/%{upstream_name}-%{
 Patch0:		Alias-2.32-perl-5.14-fix.patch
 
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This Perl module performs aliasing services. You may find this
@@ -36,14 +35,9 @@ module useful if you:
 make test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean 
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc Changes README
 %{perl_vendorlib}/*/Alias.pm
 %{perl_vendorlib}/*/auto/Alias/*
