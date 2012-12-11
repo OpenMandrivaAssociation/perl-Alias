@@ -42,3 +42,49 @@ make test
 %{perl_vendorlib}/*/Alias.pm
 %{perl_vendorlib}/*/auto/Alias/*
 %{_mandir}/*/*
+
+
+%changelog
+* Sun Feb 12 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2.320.0-4
++ Revision: 773482
+- clean out
+- fix build with perl 5.14 (P0)
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Sat May 28 2011 Funda Wang <fwang@mandriva.org> 2.320.0-3
++ Revision: 680449
+- mass rebuild
+
+* Tue Jul 20 2010 Sandro Cazzaniga <kharec@mandriva.org> 2.320.0-2mdv2011.0
++ Revision: 555418
+- rebuild
+
+* Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 2.320.0-1mdv2010.0
++ Revision: 402092
+- rebuild using %%perl_convert_version
+
+* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 2.32-6mdv2009.0
++ Revision: 255266
+- rebuild
+
+* Mon Jan 14 2008 Thierry Vignaud <tv@mandriva.org> 2.32-4mdv2008.1
++ Revision: 151812
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Wed May 09 2007 Oden Eriksson <oeriksson@mandriva.com> 2.32-3mdv2008.0
++ Revision: 25442
+- rebuild
+
+
+* Thu Apr 27 2006 Nicolas L�cureuil <neoclust@mandriva.org> 2.32-2mdk
+- Fix BuildRequires Using perl Policies
+	- Source URL
+- use mkrel
+
+* Wed Jul 13 2005 Oden Eriksson <oeriksson@mandriva.com> 2.32-1mdk
+- initial Mandriva package
+
