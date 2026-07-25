@@ -2,14 +2,14 @@
 %define	upstream_version 2.32
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Version:	%{upstream_version}
+Release:	7
 
 Summary:	CPAN %{upstream_name} module for aliasing services
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Alias/%{upstream_name}-%{upstream_version}.tar.bz2
+URL:		https://metacpan.org/dist/Alias
+Source0:	https://cpan.metacpan.org/authors/id/G/GS/GSAR/Alias-%{upstream_version}.tar.gz
 Patch0:		Alias-2.32-perl-5.14-fix.patch
 
 BuildRequires:	make
@@ -81,7 +81,7 @@ make test
 - rebuild
 
 
-* Thu Apr 27 2006 Nicolas Lécureuil <neoclust@mandriva.org> 2.32-2mdk
+* Thu Apr 27 2006 Nicolas Lï¿½cureuil <neoclust@mandriva.org> 2.32-2mdk
 - Fix BuildRequires Using perl Policies
 	- Source URL
 - use mkrel
