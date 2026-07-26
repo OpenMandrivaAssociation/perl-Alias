@@ -1,15 +1,13 @@
 %define	upstream_name Alias
-%define	upstream_version 2.32
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	7
+Version:	2.32
+Release:	8
 
 Summary:	CPAN %{upstream_name} module for aliasing services
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://metacpan.org/dist/Alias
-Source0:	https://cpan.metacpan.org/authors/id/G/GS/GSAR/Alias-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/G/GS/GSAR/Alias-%{version}.tar.gz
 Patch0:		Alias-2.32-perl-5.14-fix.patch
 
 BuildRequires:	make
@@ -27,7 +25,7 @@ module useful if you:
      trust yourself from changing $PI
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 %patch0 -p1 -b .perl514~
 
 %build
@@ -62,9 +60,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 2.320.0-1mdv2010.0
 + Revision: 402092
-- rebuild using %%perl_convert_version
-
-* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 2.32-6mdv2009.0
+- rebuild using %2.32 Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 2.32-6mdv2009.0
 + Revision: 255266
 - rebuild
 
